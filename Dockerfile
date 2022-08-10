@@ -12,4 +12,4 @@ RUN wget https://github.com/grafana/loki/releases/download/v2.6.1/promtail-linux
 ENV PROMTAIL_HOME=/opt/sh/promtail
 
 ENTRYPOINT ["/opt/sh/promtail/promtail"]
-CMD ["-config.file=/opt/sh/promtail/config/config.yml"]
+CMD ["-config.expand-env -config.file=/opt/sh/promtail/config/config.yml"]
